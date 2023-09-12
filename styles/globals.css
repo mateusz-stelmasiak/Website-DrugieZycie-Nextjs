@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--off-white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+body {
+  font-family: "Segoe UI", 'Open Sans', sans-serif;
+  max-width: 1900px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+main{
+  background-color: var(--background-color);
+  position: relative;
+}
+
+section{
+  position: relative;
+}
+
+body button{
+  transition: 300ms;
+}
+
+
+#primary {
+  margin-right: auto;
+  animation-name: fadeInLeft;
+  padding: 2.5rem 4% 2.5rem 5rem;
+}
+
+#primary:before {
+  background-color: var(--secondary-color);
+  left: 0;
+}
+
+
+@media only screen and (max-width: 700px) {
+  #primary {
+    padding: 1.5rem 6%;
+  }
+}
+
+:root {
+  --primary-color: #004d91;
+  --primary-color-opaque: rgba(0, 77, 145, 0.2);
+  --primary-color-opaque-litle:rgba(0,77,145,0.8);
+  --secondary-color: #d5083a;
+  --secondary-color-opaque: rgba(213, 8, 58, 0.5);
+  --background-color: #eeeeee;
+  --section-color: #eeeeee;
+  --off-white-color:#FEFEFE;
+  --partners-text-color: #A7A39E;
+  --row-content-padding-top: 1rem;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0)
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0)
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+.fadeInLeft{
+  animation-name: fadeInLeft;
+  animation-duration: 700ms;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+}
+.fadeInRight{
+  animation-name: fadeInRight;
+  animation-duration: 700ms;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3)
+  }
+  50% {
+    opacity: 1
+  }
+}
+
+@keyframes zoomInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(.55, .055, .675, .19);
+    animation-timing-function: cubic-bezier(.55, .055, .675, .19)
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1)
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .offcanvas {
+    width: 100% !important;
+  }
+
+  .offcanvas-body {
+    width: 100%;
+  }
+
+}
+@media only screen and (max-width: 650px) {
+  .ReactGridGallery_tile{
+    width:100%;
+  }
+}
+
+.slick-prev::before, .slick-next::before{
+  color: var(--primary-color) !important;
+}

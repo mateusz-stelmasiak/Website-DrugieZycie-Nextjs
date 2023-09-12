@@ -1,0 +1,15 @@
+.wave{
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    overflow-x: hidden;
+    z-index: 4;
+}
+
+.upsideDown{
+    position: static;
+    bottom:unset;
+    top:0;
+    transform: rotate(180deg);
+    z-index: 4;
+}

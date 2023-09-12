@@ -1,0 +1,18 @@
+.imageContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    column-gap:1rem;
+    row-gap: 1rem;
+    justify-content: space-around;
+}
+
+
+.imageContainer img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}

@@ -1,0 +1,261 @@
+.sectionContainer {
+    background-color: var(--off-white-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-top: 10px;
+    overflow-x:hidden;
+}
+
+.newsContainer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 4rem;
+    align-items: flex-end;
+}
+
+.newsContainerBackground {
+    background-color: var(--background-color);
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+
+
+.buttonSection {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: center;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
+
+.buttonSection button {
+    all: unset;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 900;
+    transition: 250ms;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.9rem;
+    opacity: 0.4;
+}
+
+.buttonSection button:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.buttonSection button[disabled] {
+    opacity: 0.1;
+}
+
+.buttonSection button[disabled]:hover {
+    transform: none;
+}
+
+.buttonSection .current {
+    background-color: var(--secondary-color);
+    opacity: 1;
+    padding: 1.3rem;
+}
+
+.itemContainer {
+    display: flex;
+    column-gap: 5%;
+    background-color: white;
+    z-index: 1;
+    position: relative;
+    box-shadow: 8px 8px 24px 0 rgba(66, 68, 90, 0.5);
+    padding: 2.5rem 7.5rem 2.5rem 4%;
+    flex-direction: row;
+    animation-duration: 800ms;
+    animation-name: fadeInRight;
+    min-width: 80%;
+    max-width: 70rem;
+}
+
+.itemContainer:before {
+    position: absolute;
+    display: inline-block;
+    height: 105%;
+    width: 5rem;
+    background-color: var(--primary-color);
+    content: "";
+    right: 0;
+    top: -2.5%;
+    z-index: 3;
+}
+
+
+.itemContainer > div:first-child {
+    margin-left: 1rem;
+}
+
+.mobileNewsItemFooter {
+    display: none;
+}
+
+.dateContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    align-items: center;
+    color: var(
+    --primary-color);
+    text-align: center;
+    font-weight: 700;
+}
+
+.dateContainer span:first-child:after {
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    width: 5rem;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.dateContainer span:nth-child(2) {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.dateContainer span:nth-child(3) {
+    font-size: 0.8rem;
+
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contentContainer button {
+    all: unset;
+    background: transparent;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    padding: 8px 24px;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+    transition: 300ms;
+    font-weight: 550;
+    opacity: 0.7;
+    max-width: 7rem;
+    text-align: center;
+    margin-top:1rem;
+}
+
+.contentContainer button:hover{
+    opacity: 1;
+}
+
+.newsContent{
+    margin-top:1.5rem;
+}
+
+
+.newsTitle{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+}
+
+.newsAuthor {
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+.buttonSection .currentPage{
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.9rem;
+    opacity: 1;
+}
+
+.buttonSection .currentPage:hover {
+    transform: none;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .contentContainer{
+        width: unset;
+    }
+    .newsContainer {
+        row-gap: 0.5rem;
+        padding-top: 1rem;
+    }
+
+    .newsContent{
+        margin-top:0.2rem
+    }
+
+    .itemContainer {
+        padding: 1.5rem 6%;
+        width: 100%;
+        box-shadow:unset;
+    }
+
+    .newsTitle{
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+
+    .itemContainer:before {
+        content: unset;
+    }
+
+    .mobileNewsItemFooter {
+        display: flex;
+        opacity: 0.8;
+        justify-content: flex-end;
+        font-size: 0.9rem;
+    }
+    .dateContainer{
+        display: none;
+    }
+    .newsAuthor{
+        display: none;
+    }
+    .newsContainerBackground {
+        height: 85%;
+    }
+
+}
+

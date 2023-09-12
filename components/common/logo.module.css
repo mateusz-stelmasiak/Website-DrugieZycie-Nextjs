@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    color: var(--primary-color);
+    align-items: center;
+    column-gap: 1rem;
+    font-family: Lato, serif;
+}
+.desc{
+    display: block;
+}
+@media only screen and (max-width: 500px){
+    .desc{
+        display: none;
+    }
+}
+
+
+.firstLine {
+    margin: unset;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.secondLine {
+    margin: unset;
+    font-size: 0.7rem;
+    font-weight: 200;
+}
+
+
+.container .imgContainer {
+    height: 3.5rem;
+    object-fit: contain;
+}
+.imgContainer img{
+    height: 90%;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+.container:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+

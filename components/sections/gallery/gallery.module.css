@@ -1,0 +1,107 @@
+.gallery{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: unset;
+}
+
+.imageTrack {
+    margin-left: 10%;
+    margin-top:2rem;
+    transition:100ms;
+    display: flex;
+    gap: 35px;
+    user-select: none; /* -- Prevent image highlighting -- */
+    margin-bottom: 4rem;
+    height: 65vh;
+    position: relative;
+}
+
+.fullScreenTrack{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left:0;
+    z-index: 5;
+    height: 100vh;
+    background-color: #151515;
+    margin:unset;
+}
+
+.fullScreenTrack .scrollableItem{
+    width: 95vw;
+    height: 100%;
+}
+
+.scrollableItem{
+    width: 350px;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% center;
+}
+
+.imageTrack button{
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding: 8px 120px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+    transition: 300ms;
+    font-weight: 550;
+    opacity: 0;
+    transform: translate3d( 100%, 0, 0);
+}
+
+
+.closeButton{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:20px;
+    right:30px;
+    z-index: 6;
+    color:black;
+    font-size: 2rem;
+    background-color: var(--off-white-color);
+    padding:0.1rem 0.6rem;
+    cursor:pointer;
+}
+.closeButton:hover{
+    color:black;
+}
+.trackTitle{
+    writing-mode: sideways-lr;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .imageTrack {
+        left: 1%;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}

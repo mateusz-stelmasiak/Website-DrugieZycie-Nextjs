@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /admin/
+
+# Rewrite requests for static files to the correct subfolder
+RewriteRule ^static/(.*)$ /admin/static/$1 [L]
+
+# Rewrite requests for index.html to the correct subfolder
+RewriteRule ^index\.html$ - [L]
+
+# Rewrite all other requests to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /admin/index.html [L]

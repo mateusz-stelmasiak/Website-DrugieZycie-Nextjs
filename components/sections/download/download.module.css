@@ -1,0 +1,52 @@
+.downloadContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 1rem;
+    background-color: var(--off-white-color);
+    align-items: center;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+
+.textContainer {
+    width: 100%;
+}
+
+.downloadItemsContainer{
+    padding: 0 4%;
+    width: 100%;
+    max-width: 55rem;
+}
+
+.linkContainer {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    text-decoration:underline;
+    max-width: 80%;
+}
+
+.linkList {
+    list-style-type: none; /* Remove bullets */
+    padding: 0.7rem 0 0.3rem 0;
+}
+
+.linkItem {
+    text-align: left;
+    display:flex;
+    flex-direction:row;
+    column-gap: 0.5rem;
+}
+
+@media screen and (max-width: 40em){
+    .responsiveTable tbody tr .tableColumn{
+        padding-left: 2% !important;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,36 @@
+.container {
+    bottom:-5%;
+    left:20%;
+    position:absolute;
+    right: 0;
+    z-index:4;
+}
+.container span{
+    color:var(--primary-color);
+    left:0;
+    opacity:1;
+    position:absolute;
+    top:calc(65%);
+    transform-origin:bottom;
+}
+
+.hand {
+    animation:swipe 1s ease-in-out infinite;
+    color:var(--off-white-color);
+    font-size:100px;
+    height:100px;
+    opacity:.7;
+    position:absolute;
+    top:-100px;
+    transform-origin:bottom;
+    width:100px;
+}
+
+@keyframes swipe {
+    0% {
+        transform:translate(130%) rotate(-15deg);
+    }
+    100% {
+        transform:translate(0) rotate(0deg);
+    }
+}

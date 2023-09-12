@@ -1,0 +1,22 @@
+.titleContainer{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.titleText h2 {
+    margin: unset;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding-top: 1rem;
+}
+
+.subtitleContainer {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+

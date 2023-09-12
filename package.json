@@ -1,0 +1,71 @@
+{
+  "name": "drugie-zycie",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3005",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@dhaiwat10/react-link-preview": "^1.14.2",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@trendyol-js/react-carousel": "^3.0.0",
+    "dayjs": "^1.11.6",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.4",
+    "firebase": "^9.14.0",
+    "firebase-admin": "^11.4.1",
+    "html-metadata-parser": "^2.0.4",
+    "html2react": "^1.2.1",
+    "next": "13.0.4",
+    "next-sitemap": "^3.1.45",
+    "nextjs-cors": "^2.1.2",
+    "nextjs-google-analytics": "^2.3.3",
+    "nodemailer": "^6.8.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
+    "react-content-loader": "^6.2.0",
+    "react-countup": "^6.3.2",
+    "react-dom": "^18.2.0",
+    "react-google-recaptcha-v3": "^1.10.1",
+    "react-grid-gallery": "^1.0.0",
+    "react-image-gallery": "^1.2.11",
+    "react-image-lightbox": "^5.1.4",
+    "react-placeholder-loading": "^0.5.30",
+    "react-redux": "^8.0.5",
+    "react-scale-text": "^1.2.2",
+    "react-slick": "^0.29.0",
+    "react-super-responsive-table": "^5.2.1",
+    "react-switch": "^7.0.0",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.2",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "react-aria": "^3.21.0",
+    "react-faq-component": "^1.3.4",
+    "react-simple-maps": "^1.0.0",
+    "react-social-icons": "^5.15.0",
+    "redux-devtools-extension": "^2.13.9"
+  },
+  "overrides": {
+    "@trendyol-js/react-carousel": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "@dhaiwat10/react-link-preview": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "html2react": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    }
+  }
+}

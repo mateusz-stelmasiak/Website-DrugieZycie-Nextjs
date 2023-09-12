@@ -1,0 +1,74 @@
+/*LOAD MORE*/
+.loadMoreButtonsContainer{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    margin-top:3rem;
+}
+
+.loadMoreButtonsContainer button{
+    all: unset;
+    background: transparent;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    padding: 8px 24px;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+    transition: 300ms;
+    font-weight: 550;
+}
+
+.loadMoreButtonsContainer .lessButton{
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+/*PAGINATION*/
+.paginationButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: center;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
+
+.paginationButtonsContainer button {
+    all: unset;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 900;
+    transition: 250ms;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.9rem;
+    opacity: 0.4;
+}
+
+.paginationButtonsContainer button:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.paginationButtonsContainer button[disabled] {
+    opacity: 0.1;
+}
+
+.paginationButtonsContainer button[disabled]:hover {
+    transform: none;
+}
+
+.paginationButtonsContainer .currentPage {
+    background-color: var(--secondary-color);
+    opacity: 1;
+    padding: 1.3rem;
+}
+
+
